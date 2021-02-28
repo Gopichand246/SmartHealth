@@ -7,8 +7,8 @@ app=Flask(__name__)
 
 app.config['MYSQL_HOST']='localhost'
 app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='gopi@241215'
-app.config['MYSQL_DB']='SmartHealth'
+app.config['MYSQL_PASSWORD']='*******'
+app.config['MYSQL_DB']='********'
 
 mysql=MySQL(app)
 
@@ -34,7 +34,7 @@ def home():
 @app.route('/upload')
 def upload():
     cur=mysql.connection.cursor()
-    r=requests.get('https://api.thingspeak.com/channels/1239436/feeds.json?api_key=5757BWS3JI7B86AO&results=2')
+    r=requests.get('***get data from thingspeak URL****')
     data=r.json()
     id=data['feeds'][0]['field1']
     heartbeat=data['feeds'][0]['field2']
