@@ -1,7 +1,7 @@
 import random
 import urllib.request
 import time
-BaseURL= "https://api.thingspeak.com/update?api_key=K9NWZOFX7F3GR04P"
+BaseURL= "***thingspeak URL***"
 
 while True:
     PatientID=random.randint(2,4)
